@@ -11,7 +11,8 @@ flask = "*"
 pillow = "*"
 psycopg2-binary = "*"
 flask_sqlalchemy = "*"
-
+pika = "*"
+pipfile = "*"
 
 [requires]
 python_version = "3.7"
