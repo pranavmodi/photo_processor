@@ -1,6 +1,7 @@
 CREATE EXTENSION IF NOT EXISTS pgcrypto;
 
-DROP TABLE IF EXISTS photos;
+DROP TABLE IF EXISTS photos CASCADE;
+DROP TABLE IF EXISTS photo_thumbnails;
 DROP TYPE IF EXISTS photo_status;
 
 CREATE TYPE photo_status as enum('pending', 'completed', 'processing', 'failed');

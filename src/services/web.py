@@ -40,7 +40,7 @@ def index():
 @app.route("/photos/pending", methods=["GET"])
 def get_pending_photos():
     from model import Photo
-    photos = Photo.query.all()
+    photos = Photo.query.filter_by(status='pending').all()
     return jsonify(str(photos))
 
 
